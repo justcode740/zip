@@ -1,0 +1,100 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model dapp_info {
+  crawl_id     BigInt    @id @default(autoincrement())
+  dapp_id      BigInt?
+  crawled_info Json?     @db.Json
+  created_at   DateTime? @default(now()) @db.Timestamp(6)
+  dapps        dapp?     @relation(fields: [dapp_id], references: [dapp_id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model recommendation {
+  recommendation_id BigInt   @id @default(autoincrement())
+  user_master_key   String?  @db.VarChar
+  dapp_ids          BigInt[]
+  users             user?    @relation(fields: [user_master_key], references: [master_key], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model comment {
+  comment_id      BigInt    @id @default(autoincrement())
+  dapp_id         BigInt?
+  user_master_key String?   @db.VarChar
+  content         String?   @db.VarChar
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  dapp            dapp?     @relation(fields: [dapp_id], references: [dapp_id], onDelete: NoAction, onUpdate: NoAction)
+  user            user?     @relation(fields: [user_master_key], references: [master_key], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model dapp {
+  dapp_id        BigInt      @id @default(autoincrement())
+  name_id        String      @db.VarChar
+  name           String      @db.VarChar
+  logo_url       String?     @db.VarChar
+  home_page_link String?     @db.VarChar
+  description    String?     @db.VarChar
+  chain_id       BigInt
+  token_address  String?     @db.VarChar
+  token_symbol   String?     @db.VarChar
+  gecko_id       String?     @db.VarChar
+  cmc_id         String?     @db.VarChar
+  twitter        String?     @db.VarChar
+  category       String?     @db.VarChar
+  tvl            Float?
+  created_at     DateTime?   @default(now()) @db.Timestamp(6)
+  comment        comment[]
+  dapp_info      dapp_info[]
+  dapp_pin       dapp_pin[]
+  like           like[]
+}
+
+model dapp_pin {
+  pin_id          BigInt    @id @default(autoincrement())
+  user_master_key String?   @db.VarChar
+  dapp_id         BigInt?
+  created_at      DateTime? @default(now()) @db.Timestamp(6)
+  dapp            dapp?     @relation(fields: [dapp_id], references: [dapp_id], onDelete: NoAction, onUpdate: NoAction)
+  user            user?     @relation(fields: [user_master_key], references: [master_key], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([user_master_key, dapp_id], map: "dapp_pin_user_master_key_dapp_id_idx")
+}
+
+model like {
+  like_id    BigInt    @id @default(autoincrement())
+  dapp_id    BigInt?
+  user_id    String?   @db.VarChar
+  created_at DateTime? @default(now()) @db.Timestamp(6)
+  dapp       dapp?     @relation(fields: [dapp_id], references: [dapp_id], onDelete: NoAction, onUpdate: NoAction)
+  user       user?     @relation(fields: [user_id], references: [master_key], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model permission {
+  permission_id    BigInt    @id @default(autoincrement())
+  user_master_key  String?   @db.VarChar
+  protocol_address String?   @db.VarChar
+  protocol_name    String?   @db.VarChar
+  token            String?   @db.VarChar
+  amount           BigInt?
+  decimal          BigInt?
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  user             user?     @relation(fields: [user_master_key], references: [master_key], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([user_master_key, protocol_address], map: "permission_user_master_key_protocol_address_idx")
+}
+
+model user {
+  master_key     String           @id @db.VarChar
+  all_keys       String[]         @db.VarChar
+  created_at     DateTime?        @default(now()) @db.Timestamp(6)
+  comment        comment[]
+  dapp_pin       dapp_pin[]
+  like           like[]
+  permission     permission[]
+  recommendation recommendation[]
+}

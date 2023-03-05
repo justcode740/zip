@@ -1,0 +1,226 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/zw/zip-framework/contracts/executor.sol": {
+      "lastModificationDate": 1676971256137,
+      "contentHash": "fd3d2fc4ed885dfe5c5cbbd5e95d3ca1",
+      "sourceName": "contracts/executor.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@axelar-network/axelar-gmp-sdk-solidity/contracts/executables/AxelarExecutable.sol",
+        "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol",
+        "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol",
+        "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol"
+      ],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "DistributionExecutable",
+        "IWETH"
+      ]
+    },
+    "/home/zw/zip-framework/node_modules/@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol": {
+      "lastModificationDate": 1675304786206,
+      "contentHash": "c493ed470617f40baa752fe772d3490e",
+      "sourceName": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAxelarGateway"
+      ]
+    },
+    "/home/zw/zip-framework/node_modules/@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol": {
+      "lastModificationDate": 1675304786206,
+      "contentHash": "a0e1a9afa9d0b1cffeaf1d16c8a15287",
+      "sourceName": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/home/zw/zip-framework/node_modules/@axelar-network/axelar-gmp-sdk-solidity/contracts/executables/AxelarExecutable.sol": {
+      "lastModificationDate": 1675304786186,
+      "contentHash": "dd2e042ca387f1c6b73f1a43eb9b97c9",
+      "sourceName": "@axelar-network/axelar-gmp-sdk-solidity/contracts/executables/AxelarExecutable.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IAxelarGateway.sol",
+        "../interfaces/IAxelarExecutable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AxelarExecutable"
+      ]
+    },
+    "/home/zw/zip-framework/node_modules/@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol": {
+      "lastModificationDate": 1675304786206,
+      "contentHash": "11c0bdaf20cc99f9f93160acd2c3a99c",
+      "sourceName": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAxelarGasService"
+      ]
+    },
+    "/home/zw/zip-framework/node_modules/@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarExecutable.sol": {
+      "lastModificationDate": 1675304786196,
+      "contentHash": "d32da731db236d4f1c96f51fcd6b6348",
+      "sourceName": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarExecutable.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IAxelarGateway.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAxelarExecutable"
+      ]
+    }
+  }
+}

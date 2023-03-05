@@ -1,0 +1,4 @@
+get rid of axelar's dev tool and create own fork to simulate and gaslimit, 
+prepare to integrate with other bridges
+currnet local fork fail from time to time, unsure the root reason, maybe just create
+a dock env and run all forked chains manullay locally would be better

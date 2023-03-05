@@ -1,0 +1,10 @@
+{
+    "curvev1": {
+        "address": "0x15a1c069fcf6f79a3d5bb5d4a8ba004fbf4fabac",
+        "functions" : {}
+    },
+    "description" : "curve",
+    "category": "dex",
+    "social": "https://curve.fi/"
+
+}

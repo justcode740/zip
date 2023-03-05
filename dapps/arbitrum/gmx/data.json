@@ -1,0 +1,50 @@
+ {
+   "router": {
+        "address": "0xaBBc5F99639c9B6bCb58544ddf04EFA6802F4064",
+        "functions" : {
+            "swap" : {
+                "inputs": [
+                    {
+                        "internalType": "address[]",
+                        "name": "_path",
+                        "type": "address[]"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "_amountIn",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "_minOut",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "_receiver",
+                        "type": "address"
+                    }
+                ],
+                "name": "swap",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function",
+                "description": "swap a to b"
+            }
+            
+        }
+
+    },
+    "positionRouter": {
+        "address": "0xb87a436B93fFE9D75c5cFA7bAcFff96430b09868",
+        "functions" : {
+            
+        }
+    },
+    "reader": {
+        "address": "0x22199a49A999c351eF7927602CFB187ec3cae489"
+    },
+    "description" : "perp",
+    "category": "defi",
+    "social": "https://twitter.com/GMX_IO"
+}

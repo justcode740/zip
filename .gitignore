@@ -1,0 +1,6 @@
+.env
+node_modules/
+data/python/env
+# info/*-postDeploy.json
+dist/
+local_script

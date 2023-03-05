@@ -1,0 +1,15 @@
+merge exchange and dapps 
+
+how to maintain whitelisted address:
+
+record all written address in local json
+new dapp in
+check diff, then submit diff as tx to corresponding chain
+update local json
+
+
+how to run e2e test now?
+npx hardhat compile
+node scripts/deploy.js mainnet-fork
+npx ts-node scripts/addWhitelist.ts
+npx mocha -r ts-node/register dapps/arbitrum/gmx/gmx.e2e.test.ts --timeout 20000

@@ -1,0 +1,14 @@
+TODO: change user table name to users and update schema, heroku database, etc. 
+
+start the local service
+```
+sudo service postgresql start
+```
+connect to local
+```
+sudo -u postgres psql
+```
+use zipdb
+```
+\c zipdb;
+```
